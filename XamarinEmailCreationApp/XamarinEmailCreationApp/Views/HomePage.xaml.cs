@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinEmailCreationApp.ViewModels;
 
 namespace XamarinEmailCreationApp
 {
@@ -15,6 +16,7 @@ namespace XamarinEmailCreationApp
         public HomePage()
         {
             InitializeComponent();
+            this.BindingContext = new HomeViewModel();
         }
     }
 }

@@ -4,8 +4,8 @@
              x:Class="XamarinEmailCreationApp.MasterPage"
              Title="Master">
     <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Margin="20, 0, 20, 0">
-        <Button Text="Home" BackgroundColor="Red" TextColor="White" Clicked="HomeButtonClicked" />
-        <Button Text="Option1" BackgroundColor="Red" TextColor="White" Clicked="Option1ButtonClicked" />
-        <Button Text="LoginPage" BackgroundColor="Red" TextColor="White" Clicked="LoginPageButtonClicked" />
+        <Button Text="Home" BackgroundColor="Red" TextColor="White" />
+        <Button Text="Option1" BackgroundColor="Red" TextColor="White" />
+        <Button Text="LoginPage" BackgroundColor="Red" TextColor="White" Command="{Binding ReturnCommand}" />
     </StackLayout>
 </ContentPage>

@@ -9,10 +9,14 @@
 
     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand">
         <Image Source="INTECLogo.png" WidthRequest="150" HeightRequest="150"></Image>
-        <Entry Placeholder="Email" Margin="20, 0, 20, 0" x:Name="emailEntry"/>
-        <Entry Placeholder="Password" IsPassword="True" Margin="20, 0, 20, 0" x:Name="passwordEntry"/>
-        <Button Text="Login" BackgroundColor="Red" TextColor="White" Margin="20, 0, 20, 0" Clicked="LoginButtonClicked"/>
-        <Button Text="Register" TextColor="Red" BackgroundColor="Transparent" Margin="20, 0, 20, 0" Clicked="RegisterButtonClicked"/>
+        
+        <Entry Placeholder="Email" Text="{Binding CurrentUser.Email}" 
+               Margin="20, 0, 20, 0" x:Name="emailEntry"/>
+        <Entry Placeholder="Password" Text="{Binding CurrentUser.Password}" 
+               IsPassword="True" Margin="20, 0, 20, 0" x:Name="passwordEntry"/>
+        
+        <Button Text="Login" BackgroundColor="Red" TextColor="White" Margin="20, 0, 20, 0" Command="{Binding LoginCommand}"/>
+        <Button Text="Register" TextColor="Red" BackgroundColor="Transparent" Margin="20, 0, 20, 0" Command="{Binding RegisterCommand}"/>
         <BoxView BackgroundColor="Red" HorizontalOptions="Center" HeightRequest="1" WidthRequest="70" Margin="20, -20, 20, 0"/>
     </StackLayout>
 

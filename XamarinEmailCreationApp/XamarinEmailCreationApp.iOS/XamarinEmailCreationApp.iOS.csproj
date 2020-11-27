@@ -133,4 +133,7 @@
       <Name>XamarinEmailCreationApp</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\restaurantIcon.png" />
+  </ItemGroup>
 </Project>

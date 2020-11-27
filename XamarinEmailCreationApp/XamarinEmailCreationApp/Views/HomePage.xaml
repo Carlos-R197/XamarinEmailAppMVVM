@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinEmailCreationApp.HomePage">
+    <ContentPage.Content>
+        <Grid RowSpacing="20" ColumnSpacing="10" Margin="0, 0, 0, 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label Text="Discovery" FontSize="Large" FontAttributes="Bold" Margin="20, 0, 20, 0" HorizontalOptions="Center" VerticalOptions="Center"
+                   Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2"/>
+
+            <Frame HasShadow="true" Grid.Row="1" 
+                   Grid.Column="0" WidthRequest="120" HeightRequest="120" HorizontalOptions="Center">
+                <StackLayout>
+                    <Image Source="{Binding Bars.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding Bars.Title}" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="{Binding Bars.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Frame WidthRequest="120" HeightRequest="120" HasShadow="true" Grid.Row="1" Grid.Column="1" HorizontalOptions="Center">
+                <StackLayout>
+                    <Image Source="{Binding FineDining.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding FineDining.Title}" HorizontalTextAlignment="Center" FontAttributes="Bold" HorizontalOptions="Center"/>
+                    <Label Text="{Binding FineDining.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="true" Grid.Row="2" Grid.Column="0" HorizontalOptions="Center" WidthRequest="120" HeightRequest="120">
+                <StackLayout>
+                    <Image Source="{Binding JunkFood.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding JunkFood.Title}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding JunkFood.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="true" Grid.Row="2" Grid.Column="1" HorizontalOptions="Center" WidthRequest="120" HeightRequest="120">
+                <StackLayout>
+                    <Image Source="{Binding SeaFood.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding SeaFood.Title}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding SeaFood.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="true" Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" WidthRequest="120" HeightRequest="120">
+                <StackLayout>
+                    <Image Source="{Binding LocalFood.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding LocalFood.Title}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding LocalFood.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+
+            <Frame HasShadow="true" Grid.Row="3" Grid.Column="1" HorizontalOptions="Center" WidthRequest="120" HeightRequest="120">
+                <StackLayout>
+                    <Image Source="{Binding HealthyFood.Image}" HorizontalOptions="Center"/>
+                    <Label Text="{Binding HealthyFood.Title}" FontAttributes="Bold" HorizontalOptions="Center" HorizontalTextAlignment="Center"/>
+                    <Label Text="{Binding HealthyFood.Places}" HorizontalOptions="Center" />
+                </StackLayout>
+            </Frame>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

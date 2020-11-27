@@ -7,11 +7,11 @@
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand">
             <Image Source="INTECLogo.png" WidthRequest="150" HeightRequest="150"></Image>
-            <Entry Placeholder="Name" Margin="20, 0, 20, 0" x:Name="nameEntry"/>
-            <Entry Placeholder="Email" Margin="20, 0, 20, 0" x:Name="emailEntry" />
-            <Entry Placeholder="Password" IsPassword="True" Margin="20, 0, 20, 0" x:Name="passwordEntry"/>
-            <Entry Placeholder="ConfirmPassword" IsPassword="True" Margin="20, 0, 20, 0" x:Name="confirmPasswordEntry"/>
-            <Button Text="Register" BackgroundColor="Red" Margin="20, 0, 20, 0" Clicked="RegisterButtonClicked" />
+            <Entry Placeholder="Name" Margin="20, 0, 20, 0" Text="{Binding Name}"/>
+            <Entry Placeholder="Email" Margin="20, 0, 20, 0"  Text="{Binding Email}"/>
+            <Entry Placeholder="Password" Text="{Binding Password}" IsPassword="True" Margin="20, 0, 20, 0" />
+            <Entry Placeholder="ConfirmPassword" Text="{Binding ConfirmPassword}" IsPassword="True" Margin="20, 0, 20, 0" />
+            <Button Text="Register" Command="{Binding RegisterCommand}" BackgroundColor="Red" Margin="20, 0, 20, 0" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

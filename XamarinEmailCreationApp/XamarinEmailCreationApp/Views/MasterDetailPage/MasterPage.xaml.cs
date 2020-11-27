@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinEmailCreationApp.ViewModels;
 
 namespace XamarinEmailCreationApp
 {
@@ -15,21 +16,13 @@ namespace XamarinEmailCreationApp
         public MasterPage()
         {
             InitializeComponent();
+            this.BindingContext = new MasterViewModel();
         }
-
-        private void HomeButtonClicked(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Option1ButtonClicked(object sender, EventArgs e)
-        {
-
-        }
-
+        /*
         async private void LoginPageButtonClicked(object sender, EventArgs e)
         {
             await Navigation.PopAsync();
         }
+        */
     }
 }
